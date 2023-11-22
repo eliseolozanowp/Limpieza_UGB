@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "230997686075",
+    "firebase_url": "https://ugblimpieza-default-rtdb.firebaseio.com",
+    "project_id": "ugblimpieza",
+    "storage_bucket": "ugblimpieza.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230997686075:android:908d1bb4c2cee27b10e91e",
+        "android_client_info": {
+          "package_name": "com.example.limpiezaugb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVcUONxN21akOi21aAHasVrxN97GO2xew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
