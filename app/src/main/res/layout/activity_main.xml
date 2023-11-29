@@ -2,27 +2,73 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EFFCFD"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#102C54"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Asignar Area"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="250dp" />
 
-    <!-- Barra de navegación inferior -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:backgroundTint="#102C54"
+        android:textColor="@color/white"
+        android:text="Agregar Empleados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
+        tools:layout_editor_absoluteY="330dp" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:fontFamily="sans-serif-condensed"
+        android:backgroundTint="#102C54"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:text="Ver Asignaciones del Dia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="228dp"
+        android:background="#EFFCFD"
+        android:layout_height="188dp"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:backgroundTint="#102C54"
+        android:textColor="@color/white"
+        android:text="Historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="490dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

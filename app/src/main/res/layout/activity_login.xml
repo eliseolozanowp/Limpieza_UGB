@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="#EFFCFD"
     android:orientation="vertical"
     tools:context=".Login">
 
@@ -33,29 +34,31 @@
             android:background="#011B40"/>
 
         <EditText
-            android:layout_marginTop="20dp"
+            android:id="@+id/txtUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/txtUser"
-            android:hint="Usuario"
-            android:maxLines="1"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:maxLines="1"
             android:paddingLeft="20dp"
-            android:paddingRight="0dp"/>
+            android:paddingRight="0dp"
+            android:textColorHint="@color/black"/>
 
         <EditText
+            android:id="@+id/txtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:id="@+id/txtPassword"
-            android:hint="Contraseña"
-            android:maxLines="1"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:maxLines="1"
             android:paddingLeft="20dp"
-            android:paddingRight="0dp"/>
+            android:paddingRight="0dp"
+            android:textColorHint="@color/black"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLogin"
