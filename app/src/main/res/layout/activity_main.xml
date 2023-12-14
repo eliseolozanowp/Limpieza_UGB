@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/asignar"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:backgroundTint="#102C54"
@@ -22,7 +22,7 @@
         tools:layout_editor_absoluteY="250dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/agregar"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:textSize="25dp"
@@ -36,7 +36,7 @@
         tools:layout_editor_absoluteY="330dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/ver"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:fontFamily="sans-serif-condensed"
@@ -59,7 +59,7 @@
         tools:layout_editor_absoluteY="35dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/historial"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:textSize="25dp"
