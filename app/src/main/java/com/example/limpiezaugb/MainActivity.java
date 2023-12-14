@@ -2,33 +2,54 @@ package com.example.limpiezaugb;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.limpiezaugb.adaptadores.MainAdapter;
-import com.example.limpiezaugb.models.MainModel;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
+import com.example.limpiezaugb.AsignacionEmpleado;
+import com.example.limpiezaugb.EmpleadosActivity;
+import com.example.limpiezaugb.Asignacioness;
+import com.example.limpiezaugb.Historial;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerView recyclerview;
-    MainAdapter mainAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Botón para Asignar
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, AsignacionEmpleado.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botón para Empleados
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, EmpleadosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botón para Asignaciones
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Asignacioness.class);
+                startActivity(intent);
+            }
+        });
+
+        // Botón para Historial
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Historial.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }
