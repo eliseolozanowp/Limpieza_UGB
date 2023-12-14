@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AsignacionEmpleado.class);
+                Intent intent = new Intent(MainActivity.this, AsignacionAreas.class);
                 startActivity(intent);
             }
         });

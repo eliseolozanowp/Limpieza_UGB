@@ -5,4 +5,11 @@
     <string name="hint_correo_electronico">Correo electronico:</string>
     <string name="btn_guarda">Guardar registro</string>
     <string name="menu_nuevo">Nuevo registro</string>
+
+    <string-array name="zonas">
+        <item>Zona 1</item>
+        <item>Zona 2</item>
+        <item>Zona 3</item>
+        <!-- Agrega más zonas según sea necesario -->
+    </string-array>
 </resources>

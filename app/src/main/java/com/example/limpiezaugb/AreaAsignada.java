@@ -5,6 +5,7 @@ public class AreaAsignada {
     private String zona;
     private String hora;
     private long timestamp;
+    private String estado;
 
     // Constructor vacío requerido por Firebase Realtime Database
     public AreaAsignada() {
@@ -15,6 +16,7 @@ public class AreaAsignada {
         this.zona = zona;
         this.hora = hora;
         this.timestamp = timestamp;
+        this.estado = "Sin comenzar";
     }
 
     public String getNombre() {
@@ -48,5 +50,12 @@ public class AreaAsignada {
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
-}
 
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+}
