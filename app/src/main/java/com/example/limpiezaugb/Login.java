@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
+    String usuarioTxt;
     private
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://ugblimpieza-default-rtdb.firebaseio.com/");
@@ -69,6 +70,12 @@ public class Login extends AppCompatActivity {
                                         Toast.makeText(Login.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
                                     }
                                 } else {
+                                    // Después de guardar el nombre de usuario en preferencias compartidas
+                                    Log.d("UsuarioActual", "Valor del campo de entrada de usuario: " + user.getText().toString());
+                                    usuarioTxt = user.getText().toString();
+
+                                    guardarUsuarioActual(userTxt);
+
                                     Toast.makeText(Login.this, "Inicio de sesión exitoso como usuario normal", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(Login.this, EmpleadosActivity.class)); // Redirigir a EmpleadoActivity para usuarios normales
                                     finish();
@@ -86,5 +93,12 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+    }
+    // Método para guardar el nombre de usuario en las preferencias compartidas
+    private void guardarUsuarioActual(String usuario) {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("usuario_actual", usuario);
+        editor.apply();
     }
 }

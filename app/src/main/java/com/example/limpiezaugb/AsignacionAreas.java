@@ -89,11 +89,12 @@ public class AsignacionAreas extends AppCompatActivity {
                     Toast.makeText(AsignacionAreas.this, "Ingrese la hora de inicio", Toast.LENGTH_SHORT).show();
                 } else {
                     final String nombreUsuario = selectedUser.getName();
+                    final String usuario = selectedUser.getUser();
 
                     // Obtener la referencia a la base de datos
                     DatabaseReference areasRef = databaseReference.child("areas");
 
-                    final String areaId = generateAreaId(nombreUsuario, selectedZona);
+                    final String areaId = generateAreaId(usuario, selectedZona);
 
                     // Obtener la marca de tiempo actual
                     long currentTimeMillis = System.currentTimeMillis();
@@ -103,6 +104,8 @@ public class AsignacionAreas extends AppCompatActivity {
 
                     // Guardar el objeto en la base de datos
                     areasRef.child(areaId).setValue(areaAsignada);
+
+                    areasRef.child(areaId).child("usuario").setValue(usuario);
 
                     Toast.makeText(AsignacionAreas.this, "Área asignada con éxito", Toast.LENGTH_SHORT).show();
 

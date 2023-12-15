@@ -93,31 +93,6 @@ public class NuevoActivity extends AppCompatActivity {
                 }
             }
         });
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int itemId = item.getItemId();
-                if (itemId == R.id.navigation_inicio) {
-                    startActivity(new Intent(NuevoActivity.this, MainActivity.class));
-                    return true;
-                } else if (itemId == R.id.navigation_asignacion) {
-                    startActivity(new Intent(NuevoActivity.this, AsignacionAreas.class));
-                    return true;
-                } else if (itemId == R.id.navigation_empleados) {
-                    startActivity(new Intent(NuevoActivity.this, NuevoActivity.class));
-                    return true;
-                } else if (itemId == R.id.navigation_logout) {
-                    // Cerrar Sesión
-                    FirebaseAuth.getInstance().signOut(); // Cierra la sesión actual
-                    startActivity(new Intent(NuevoActivity.this, Login.class)); // Redirige a la pantalla de inicio de sesión
-                    finish(); // Cierra la actividad actual
-                    return true;
-                }
-                return false;
-            }
-        });
     }
 
 }
