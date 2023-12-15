@@ -39,6 +39,29 @@ public class Asignacioness extends AppCompatActivity {
         mainAdapter = new MainAdapter(options);
         recyclerview.setAdapter(mainAdapter);
 
+        // Obtén la fecha actual en milisegundos
+        long currentTimeMillis = System.currentTimeMillis();
+
+        // Itera a través de las asignaciones en el adaptador
+        for (int i = 0; i < mainAdapter.getItemCount(); i++) {
+            MainModel asignacion = mainAdapter.getItem(i);
+
+            // Obtén la fecha de la asignación en milisegundos (puedes almacenarla en tu modelo)
+            long fechaAsignacionMillis = asignacion.getFechaAsignacionMillis();
+
+            // Calcula la diferencia en días entre la fecha actual y la fecha de la asignación
+            long diferenciaDias = (currentTimeMillis - fechaAsignacionMillis) / (24 * 60 * 60 * 1000);
+
+            // Define la cantidad de días que quieres considerar antes de eliminar la asignación
+            int diasMaximos = 1; // Por ejemplo, eliminar después de 1 día
+
+            if (diferenciaDias >= diasMaximos) {
+                // Elimina la asignación de la vista
+                mainAdapter.deleteItem(i);
+            }
+        }
+
+
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

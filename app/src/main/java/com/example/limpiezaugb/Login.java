@@ -77,7 +77,7 @@ public class Login extends AppCompatActivity {
                                     guardarUsuarioActual(userTxt);
 
                                     Toast.makeText(Login.this, "Inicio de sesión exitoso como usuario normal", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(Login.this, EmpleadosActivity.class)); // Redirigir a EmpleadoActivity para usuarios normales
+                                    startActivity(new Intent(Login.this, MainActivity2.class)); // Redirigir a EmpleadoActivity para usuarios normales
                                     finish();
                                 }
                             } else {

@@ -39,11 +39,20 @@ public class Main2Adapter extends FirebaseRecyclerAdapter<Model2,Main2Adapter.my
     protected void onBindViewHolder(@NonNull Main2Adapter.myViewHolder holder, int position, @NonNull Model2 model) {
         String estado = model.getEstado();
 
+        // Configura el fondo de la tarjeta según el estado
+        if ("Sin comenzar".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_sin_comenzar);
+        } else if ("En progreso".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_en_progreso);
+        } else if ("Tarea completada".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_tarea_completada);
+        }
+
         // Verificar si el estado es "Tarea completada" y ocultar la vista si es así
         if ("Tarea completada".equals(estado)) {
-            holder.itemView.setVisibility(View.GONE);
+            holder.confirmarButton.setVisibility(View.GONE);
         } else {
-            holder.itemView.setVisibility(View.VISIBLE);
+            holder.confirmarButton.setVisibility(View.VISIBLE);
 
             holder.zona.setText(model.getZona());
             holder.hora.setText(model.getHora());

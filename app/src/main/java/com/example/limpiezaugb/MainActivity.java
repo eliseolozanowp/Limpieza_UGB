@@ -24,15 +24,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Botón para Empleados
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EmpleadosActivity.class);
-                startActivity(intent);
-            }
-        });
-
         // Botón para Asignaciones
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override

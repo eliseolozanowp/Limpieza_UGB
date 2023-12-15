@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFFCFD"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -17,25 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAsignaciones" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="305dp"
-        android:layout_height="53dp"
-        android:backgroundTint="#102C54"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Asignar Area"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintBottom_toTopOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnAsignaciones"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:fontFamily="sans-serif-condensed"
@@ -46,11 +31,11 @@
         android:text="Ver Asignaciones del Dia"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintBottom_toTopOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/btnHistorial" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnHistorial"
         android:layout_width="305dp"
         android:layout_height="53dp"
         android:textSize="25sp"
@@ -61,7 +46,7 @@
         android:text="Historial"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsignaciones"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

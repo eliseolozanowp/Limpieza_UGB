@@ -39,6 +39,17 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
 
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull MainModel model) {
+        String estado = model.getEstado();
+
+        // Configura el fondo de la tarjeta según el estado
+        if ("Sin comenzar".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_sin_comenzar);
+        } else if ("En progreso".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_en_progreso);
+        } else if ("Tarea completada".equals(estado)) {
+            holder.itemView.setBackgroundResource(R.drawable.card_background_tarea_completada);
+        }
+
         holder.nombre.setText(model.getNombre());
         holder.zona.setText(model.getZona());
         holder.estado.setText(model.getEstado());
@@ -64,6 +75,15 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel,MainAdapter.m
         });
         return viewHolder;
     }
+
+    public void deleteItem(int position) {
+        if (position < getItemCount()) {
+            // Elimina la asignación de la vista y notifica el cambio
+            getSnapshots().getSnapshot(position).getRef().removeValue();
+            notifyItemRemoved(position);
+        }
+    }
+
 
     class myViewHolder extends RecyclerView.ViewHolder{
 

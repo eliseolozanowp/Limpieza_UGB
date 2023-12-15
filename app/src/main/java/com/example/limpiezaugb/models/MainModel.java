@@ -2,6 +2,7 @@ package com.example.limpiezaugb.models;
 
 public class MainModel {
     String nombre, zona, estado;
+    long fechaAsignacionMillis;
 
     MainModel()
     {
@@ -11,6 +12,7 @@ public class MainModel {
         this.nombre = nombre;
         this.zona = zona;
         this.estado = estado;
+        this.fechaAsignacionMillis = System.currentTimeMillis();
     }
 
     public String getNombre() { return nombre; }
@@ -29,5 +31,13 @@ public class MainModel {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public long getFechaAsignacionMillis() {
+        return fechaAsignacionMillis;
+    }
+
+    public void setFechaAsignacionMillis(long fechaAsignacionMillis) {
+        this.fechaAsignacionMillis = fechaAsignacionMillis;
     }
 }
