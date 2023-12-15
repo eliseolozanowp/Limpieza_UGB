@@ -45,7 +45,7 @@
 
         <!-- Agregar un botón "Detalles" -->
         <Button
-            android:id="@+id/btnDetalles"
+            android:id="@+id/btnConfirmar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Confirmar"
